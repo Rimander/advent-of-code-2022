@@ -48,7 +48,7 @@ def recursive_all_arr(directory, directories_accepted):
         recursive_all_arr(dir_, directories_accepted)
 
 
-with open('input.csv') as file:
+with open('input.txt') as file:
     lines = file.readlines()
     base_dir = Directory("/", None)
     dir_obj = {'dir': base_dir}
