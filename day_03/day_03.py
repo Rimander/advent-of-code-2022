@@ -14,13 +14,9 @@ with open('input.txt') as file:
         first = line[0:int(len(line) / 2)]
         second = line[int(len(line) / 2):]
 
-        equal_item = None
         for f_character in first:
             if f_character in second:
-                equal_item = f_character
-
-        if equal_item is not None:
-            points += CHARACTERS.index(equal_item) + 1
+                points += CHARACTERS.index(f_character) + 1
 
     print(points)
 
@@ -33,15 +29,8 @@ with open('input.txt') as file:
         l_2 = lines_group[1].replace('\n', '')
         l_3 = lines_group[2].replace('\n', '')
 
-        equal_item = None
-        first_equal = False
-        second_equal = False
-
         for f_character in l_1:
             if f_character in l_2 and f_character in l_3:
-                equal_item = f_character
-
-        if equal_item is not None:
-            points += CHARACTERS.index(equal_item) + 1
+                points += CHARACTERS.index(f_character) + 1
 
     print(points)
